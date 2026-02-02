@@ -73,14 +73,14 @@ export default function Home() {
           </h2>
 
           <p>
-            Enthusiastic about crafting user-focused digital solutions using the latest web technologies. I'm eager to
+            Enthusiastic about crafting user-focused digital solutions using the latest web technologies. I&apos;m eager to
             learn and bring my creative ideas to life through engaging interfaces and mobile app experiences.
           </p>
           <div className="btn-sci">
             <a href="#" className="btn">Download CV</a>
             <div className="sci">
-              <a href="https://github.com/Ransiluni2003"><i className='bx bxl-github'></i></a>
-              <a href="https://www.linkedin.com/in/pinithi-ransiluni-8b8936329/"><i className='bx bxl-linkedin'></i></a>
+              <a href="https://github.com/Ransiluni2003"><i className="bx bxl-github"></i></a>
+              <a href="https://www.linkedin.com/in/pinithi-ransiluni-8b8936329/"><i className="bx bxl-linkedin"></i></a>
             </div>
           </div>
         </div>
