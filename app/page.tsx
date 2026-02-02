@@ -53,23 +53,23 @@ export default function Home() {
       </nav>
 
       <div className="bars-animation">
-        <div className="bar" style={{ ['--i' as any]: 6 }}></div>
-        <div className="bar" style={{ ['--i' as any]: 5 }}></div>
-        <div className="bar" style={{ ['--i' as any]: 4 }}></div>
-        <div className="bar" style={{ ['--i' as any]: 3 }}></div>
-        <div className="bar" style={{ ['--i' as any]: 2 }}></div>
-        <div className="bar" style={{ ['--i' as any]: 1 }}></div>
+        <div className="bar" style={{ '--i': 6 } as React.CSSProperties}></div>
+        <div className="bar" style={{ '--i': 5 } as React.CSSProperties}></div>
+        <div className="bar" style={{ '--i': 4 } as React.CSSProperties}></div>
+        <div className="bar" style={{ '--i': 3 } as React.CSSProperties}></div>
+        <div className="bar" style={{ '--i': 2 } as React.CSSProperties}></div>
+        <div className="bar" style={{ '--i': 1 } as React.CSSProperties}></div>
       </div>
 
       <section className="home">
         <div className="home-info">
           <h1>Pinithi Ransiluni</h1>
           <h2>
-            I'm a&nbsp;
-            <span style={{ ['--i' as any]: 0 }} data-text=" Frontend Developer"> Frontend Developer</span>
-            <span style={{ ['--i' as any]: 1 }} data-text=" Software Engineering Undergraduate"> Software Engineering Undergraduate</span>
-            <span style={{ ['--i' as any]: 2 }} data-text=" Software developer"> Software developer</span>
-            <span style={{ ['--i' as any]: 3 }} data-text=" Vedio Editor"> Vedio Editor</span>
+            I&apos;m a&nbsp;
+            <span style={{ '--i': 0 } as React.CSSProperties} data-text=" Frontend Developer"> Frontend Developer</span>
+            <span style={{ '--i': 1 } as React.CSSProperties} data-text=" Software Engineering Undergraduate"> Software Engineering Undergraduate</span>
+            <span style={{ '--i': 2 } as React.CSSProperties} data-text=" Software developer"> Software developer</span>
+            <span style={{ '--i': 3 } as React.CSSProperties} data-text=" Vedio Editor"> Vedio Editor</span>
           </h2>
 
           <p>
@@ -100,10 +100,10 @@ export default function Home() {
           <div className="about-text">
             <h1>About Me</h1>
             <p>
-              Hi! I'm Pinithi Ransiluni, a passionate Software Engineering Undergraduate with a strong interest in
+              Hi! I&apos;m Pinithi Ransiluni, a passionate Software Engineering Undergraduate with a strong interest in
               frontend development, web design, and creative digital solutions. I enjoy crafting clean, responsive user
-              interfaces and turning ideas into visually appealing, interactive experiences. I'm always exploring new
-              technologies to expand my capabilities. I’m driven by curiosity, a love for learning, and a dedication to
+              interfaces and turning ideas into visually appealing, interactive experiences. I&apos;m always exploring new
+              technologies to expand my capabilities. I&apos;m driven by curiosity, a love for learning, and a dedication to
               building user-centered designs that solve real-world problems.
             </p>
           </div>
