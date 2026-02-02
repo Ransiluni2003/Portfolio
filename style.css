@@ -169,18 +169,13 @@ body{
         align-items: center;
     }
 
-    .home .home-info:first-of-type {
+    .home-info {
+        width: 100%;
         order: 1;
-        width: 100%;
     }
 
-    .home .home-img {
+    .home-img {
         order: 2;
-        width: 100%;
-    }
-
-    .home .home-info:last-of-type {
-        order: 3;
         width: 100%;
     }
 
