@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website Using HTML & CSS </title>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <a href="#" class="logo">Portfolio.</a>
+        <ul>
+            <li class="nav-link active"><a href="#">Home</a></li>
+            <li class="nav-link"><a href="#about">About Me</a></li>
+            <li class="nav-link"><a href="#projects">My Projects</a></li>
+            <li class="nav-link"><a href="">My Skills</a></li>
+            <li class="nav-link"><a href="">My Skills</a></li>
+            <li class="nav-link"><a href="">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="bars-animation">
+        <div class="bar" style="--i:6;"></div>
+        <div class="bar" style="--i:5;"></div>
+        <div class="bar" style="--i:4;"></div>
+        <div class="bar" style="--i:3;"></div>
+        <div class="bar" style="--i:2;"></div>
+        <div class="bar" style="--i:1;"></div>
+    </div>
+
+    <section class="home">
+        <div class="home-info">
+            <h1>Pinithi Ransiluni</h1>
+            <h2>I'm a&nbsp;
+                <span style="--i:0;" data-text=" Frontend Developer"> Frontend Developer</span>
+                <span style="--i:1;" data-text=" Software Engineering Undergraduate"> Software Engineering Undergraduate</span>
+                <span style="--i:2;" data-text=" Software developer"> Software developer</span>
+                <span style="--i:3;" data-text=" Vedio Editor"> Vedio Editor</span>
+                <!-- <span style="--i:4;" data-text=" Web Designer"> Web Designer</span>
+                <span style="--i:5;" data-text=" WordPress Web Developer"> WordPress Web Developer</span> -->
+            </h2>
+
+            <p>Enthusiastic about crafting user-focused digital
+                solutions using the latest web technologies.
+                I'm eager to learn and bring my creative ideas to life
+                through engaging interfaces and mobile app experiences.</p>
+            <div class="btn-sci">
+                <a href="#" class="btn">Download CV</a>
+                <div class="sci">
+                    <a href="https://github.com/Ransiluni2003"><i class='bx bxl-github'></i></a>
+                    <a href="https://www.linkedin.com/in/pinithi-ransiluni-8b8936329/"><i class='bx bxl-linkedin'></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="home-img">
+            <div class="img-box">
+                <div class="img-item">
+                    <img src="my r.png">
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-------------------------- About me section -------------------------->
+    <section class = "about section" id="about">
+        <div class="about-main">
+            <img src="my r.png" alt="image">
+            <div class ="about-text">
+                <h1>About Me</h1>
+                <p>Hi! I'm Pinithi Ransiluni, a passionate Software Engineering Undergraduate with a strong interest in frontend development, web design, and creative digital solutions. I enjoy crafting clean, responsive user interfaces and turning ideas into visually appealing, interactive experiences. I'm always exploring new technologies to expand my capabilities. I’m driven by curiosity, a love for learning, and a dedication to building user-centered designs that solve real-world problems.</p>
+            </div>
+        </div>
+    </section>
+
+    
+<!-------------------------- Projects section -------------------------->
+    <section class="projects section" id="projects">
+            <!-- Add more project cards below -->
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="project1.jpg" alt="Project 1" class="project-img" />
+                    <div class="project-info">
+                        <h2>Project One</h2>
+                        <p>Short description for project one. Highlight main features and purpose.</p>
+                        <div class="project-languages">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="project2.jpg" alt="Project 2" class="project-img" />
+                    <div class="project-info">
+                        <h2>Project Two</h2>
+                        <p>Short description for project two. Highlight main features and purpose.</p>
+                        <div class="project-languages">
+                            <span>React</span>
+                            <span>CSS</span>
+                            <span>TypeScript</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="project3.jpg" alt="Project 3" class="project-img" />
+                    <div class="project-info">
+                        <h2>Project Three</h2>
+                        <p>Short description for project three. Highlight main features and purpose.</p>
+                        <div class="project-languages">
+                            <span>Python</span>
+                            <span>Django</span>
+                            <span>HTML</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more project cards below -->
+            </div>
+    </section>
+
+
+    <script>
+  const sections = document.querySelectorAll(".section");
+  const navLinks = document.querySelectorAll(".nav-link");
+
+  window.addEventListener("scroll", () => {
+    let current = "";
+
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.clientHeight;
+      if (pageYOffset >= sectionTop - sectionHeight / 3) {
+        current = section.getAttribute("id");
+      }
+    });
+
+    navLinks.forEach((li) => {
+      li.classList.remove("active");
+      if (li.querySelector("a").getAttribute("href") === `#${current}`) {
+        li.classList.add("active");
+      }
+    });
+  });
+</script>
+<script src="script.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const aboutSection = document.getElementById("about");
+    function onScroll() {
+        const rect = aboutSection.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+            aboutSection.classList.add("visible");
+            window.removeEventListener("scroll", onScroll);
+        }
+    }
+    window.addEventListener("scroll", onScroll);
+    onScroll();
+});
+</script>
+</body>
+
+</html>

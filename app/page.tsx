@@ -1,103 +1,155 @@
-import Image from "next/image";
+"use client";
+import { useEffect } from "react";
 
 export default function Home() {
-  return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  useEffect(() => {
+    const sections = Array.from(document.querySelectorAll<HTMLElement>(".section"));
+    const navLinks = Array.from(document.querySelectorAll<HTMLElement>(".nav-link"));
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    const onScroll = () => {
+      let current = "";
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (window.pageYOffset >= sectionTop - sectionHeight / 3) {
+          current = section.getAttribute("id") || "";
+        }
+      });
+
+      navLinks.forEach((li) => {
+        li.classList.remove("active");
+        const a = li.querySelector("a");
+        if (a && a.getAttribute("href") === `#${current}`) {
+          li.classList.add("active");
+        }
+      });
+
+      const aboutSection = document.getElementById("about");
+      if (aboutSection) {
+        const rect = aboutSection.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+          aboutSection.classList.add("visible");
+        }
+      }
+    };
+
+    window.addEventListener("scroll", onScroll);
+    onScroll();
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  return (
+    <main>
+      <nav className="navbar">
+        <a href="#" className="logo">Portfolio.</a>
+        <ul>
+          <li className="nav-link active"><a href="#">Home</a></li>
+          <li className="nav-link"><a href="#about">About Me</a></li>
+          <li className="nav-link"><a href="#projects">My Projects</a></li>
+          <li className="nav-link"><a href="">My Skills</a></li>
+          <li className="nav-link"><a href="">My Skills</a></li>
+          <li className="nav-link"><a href="">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div className="bars-animation">
+        <div className="bar" style={{ ['--i' as any]: 6 }}></div>
+        <div className="bar" style={{ ['--i' as any]: 5 }}></div>
+        <div className="bar" style={{ ['--i' as any]: 4 }}></div>
+        <div className="bar" style={{ ['--i' as any]: 3 }}></div>
+        <div className="bar" style={{ ['--i' as any]: 2 }}></div>
+        <div className="bar" style={{ ['--i' as any]: 1 }}></div>
+      </div>
+
+      <section className="home">
+        <div className="home-info">
+          <h1>Pinithi Ransiluni</h1>
+          <h2>
+            I'm a&nbsp;
+            <span style={{ ['--i' as any]: 0 }} data-text=" Frontend Developer"> Frontend Developer</span>
+            <span style={{ ['--i' as any]: 1 }} data-text=" Software Engineering Undergraduate"> Software Engineering Undergraduate</span>
+            <span style={{ ['--i' as any]: 2 }} data-text=" Software developer"> Software developer</span>
+            <span style={{ ['--i' as any]: 3 }} data-text=" Vedio Editor"> Vedio Editor</span>
+          </h2>
+
+          <p>
+            Enthusiastic about crafting user-focused digital solutions using the latest web technologies. I'm eager to
+            learn and bring my creative ideas to life through engaging interfaces and mobile app experiences.
+          </p>
+          <div className="btn-sci">
+            <a href="#" className="btn">Download CV</a>
+            <div className="sci">
+              <a href="https://github.com/Ransiluni2003"><i className='bx bxl-github'></i></a>
+              <a href="https://www.linkedin.com/in/pinithi-ransiluni-8b8936329/"><i className='bx bxl-linkedin'></i></a>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        <div className="home-img">
+          <div className="img-box">
+            <div className="img-item">
+              <img src="/my-r.png" alt="image" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section className="about section" id="about">
+        <div className="about-main">
+          <img src="/my-r.png" alt="image" />
+          <div className="about-text">
+            <h1>About Me</h1>
+            <p>
+              Hi! I'm Pinithi Ransiluni, a passionate Software Engineering Undergraduate with a strong interest in
+              frontend development, web design, and creative digital solutions. I enjoy crafting clean, responsive user
+              interfaces and turning ideas into visually appealing, interactive experiences. I'm always exploring new
+              technologies to expand my capabilities. I’m driven by curiosity, a love for learning, and a dedication to
+              building user-centered designs that solve real-world problems.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Projects Section */}
+      <section className="projects section" id="projects">
+        <div className="projects-grid">
+          <div className="project-card">
+            <img src="1.png" alt="Project 1" className="project-img" />
+            <div className="project-info">
+              <h2>Project 1</h2>
+              <p>Developed a user-friendly mobile app for The Ring Restaurant to view offers, prices, and place orders easily. </p>
+              <div className="project-languages">
+                <span>Kotlin</span>
+                <span>Android Studio</span>
+              </div>
+            </div>
+          </div>
+          <div className="project-card">
+            <img src="/project2.jpg" alt="Project 2" className="project-img" />
+            <div className="project-info">
+              <h2>Project 2</h2>
+              <p>Short description for project two. Highlight main features and purpose.</p>
+              <div className="project-languages">
+                <span>React</span>
+                <span>CSS</span>
+                <span>TypeScript</span>
+              </div>
+            </div>
+          </div>
+          <div className="project-card">
+            <img src="/project3.jpg" alt="Project 3" className="project-img" />
+            <div className="project-info">
+              <h2>Project Three</h2>
+              <p>Short description for project three. Highlight main features and purpose.</p>
+              <div className="project-languages">
+                <span>Python</span>
+                <span>Django</span>
+                <span>HTML</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
   );
 }
