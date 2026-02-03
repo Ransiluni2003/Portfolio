@@ -62,7 +62,7 @@ export default function Home() {
       </div>
 
       <section className="home">
-        <div className="home-info">
+        <div className="home-info home-info-top">
           <h1>Pinithi Ransiluni</h1>
           <h2>
             I&apos;m a&nbsp;
@@ -71,7 +71,17 @@ export default function Home() {
             <span style={{ '--i': 2 } as React.CSSProperties} data-text=" Software developer"> Software developer</span>
             <span style={{ '--i': 3 } as React.CSSProperties} data-text=" Vedio Editor"> Vedio Editor</span>
           </h2>
+        </div>
 
+        <div className="home-img">
+          <div className="img-box">
+            <div className="img-item">
+              <img src="/my-r.png" alt="image" />
+            </div>
+          </div>
+        </div>
+
+        <div className="home-info home-info-bottom">
           <p>
             Enthusiastic about crafting user-focused digital solutions using the latest web technologies. I&apos;m eager to
             learn and bring my creative ideas to life through engaging interfaces and mobile app experiences.
@@ -81,13 +91,6 @@ export default function Home() {
             <div className="sci">
               <a href="https://github.com/Ransiluni2003"><i className="bx bxl-github"></i></a>
               <a href="https://www.linkedin.com/in/pinithi-ransiluni-8b8936329/"><i className="bx bxl-linkedin"></i></a>
-            </div>
-          </div>
-        </div>
-        <div className="home-img">
-          <div className="img-box">
-            <div className="img-item">
-              <img src="/my-r.png" alt="image" />
             </div>
           </div>
         </div>

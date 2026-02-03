@@ -169,7 +169,7 @@ body{
         align-items: center;
     }
 
-    .home-info {
+    .home-info-top {
         width: 100%;
         order: 1;
     }
@@ -177,6 +177,12 @@ body{
     .home-img {
         order: 2;
         width: 100%;
+        margin: 20px 0;
+    }
+
+    .home-info-bottom {
+        width: 100%;
+        order: 3;
     }
 
     .navbar {
