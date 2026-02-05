@@ -84,15 +84,20 @@
     }
 
     .home-info .btn-sci .btn {
-        padding: 14px 40px;
-        font-size: 18px;
-        min-width: 200px;
+        padding: 18px 50px;
+        font-size: 22px;
+        min-width: 240px;
     }
 
     .home-info .btn-sci .sci a {
-        padding: 12px;
-        font-size: 26px;
-        margin: 0px 12px;
+        padding: 16px 32px;
+        font-size: 28px;
+        margin: 8px 12px;
+        background: var(--accent);
+        color: #1f242d;
+        border: 2px solid var(--accent);
+        border-radius: 40px;
+        box-shadow: 0 10px 30px rgba(124, 240, 61, 0.25);
     }
 }
 
