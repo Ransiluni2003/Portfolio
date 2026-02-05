@@ -79,20 +79,27 @@
     .home-info .btn-sci,
     .home-info-bottom .btn-sci {
         justify-content: center;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
+        gap: 12px;
         margin-top: 10px;
     }
 
     .home-info .btn-sci .btn {
-        padding: 18px 50px;
-        font-size: 22px;
-        min-width: 240px;
+        padding: 14px 32px;
+        font-size: 16px;
+        min-width: auto;
+        white-space: nowrap;
+    }
+
+    .home-info .btn-sci .sci {
+        display: flex;
+        gap: 8px;
     }
 
     .home-info .btn-sci .sci a {
-        padding: 16px 32px;
-        font-size: 28px;
-        margin: 8px 12px;
+        padding: 12px 20px;
+        font-size: 20px;
+        margin: 0;
         background: var(--accent);
         color: #1f242d;
         border: 2px solid var(--accent);
