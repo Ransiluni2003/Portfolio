@@ -185,22 +185,6 @@ body{
         order: 3;
     }
 
-    .navbar {
-        padding: 16px 6%;
-        flex-direction: column;
-        gap: 12px;
-    }
-
-    .navbar ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 12px;
-    }
-
-    .navbar ul li {
-        margin-left: 0;
-    }
-
     .bars-animation {
         display: none;
     }
@@ -290,6 +274,98 @@ a{
 .navbar ul li:hover a, 
 .navbar ul li.active a{
     color: #7cf03d
+}
+
+/* Hamburger Button */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    background: none;
+    border: none;
+    gap: 6px;
+    z-index: 101;
+    padding: 10px;
+}
+
+.hamburger span {
+    width: 28px;
+    height: 3px;
+    background: #7cf03d;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(10px, 10px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* Mobile Menu */
+.nav-menu {
+    display: flex !important;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+
+    .navbar {
+        flex-direction: row !important;
+        padding: 16px 6%;
+        gap: 0;
+        justify-content: space-between;
+    }
+
+    .navbar .logo {
+        z-index: 102;
+    }
+
+    .navbar ul {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        background: #1f242d;
+        padding: 20px 0;
+        gap: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        box-shadow: 0 8px 16px rgba(124, 240, 61, 0.1);
+        border-top: 1px solid rgba(124, 240, 61, 0.2);
+    }
+
+    .navbar ul.active {
+        max-height: 500px;
+    }
+
+    .navbar ul li {
+        margin-left: 0;
+        padding: 15px 6%;
+        border-bottom: 1px solid rgba(124, 240, 61, 0.1);
+    }
+
+    .navbar ul li:last-child {
+        border-bottom: none;
+    }
+
+    .navbar ul li a {
+        font-size: 18px;
+        display: block;
+    }
 }
 
 .home{

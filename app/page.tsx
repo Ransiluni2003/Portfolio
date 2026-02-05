@@ -1,7 +1,9 @@
 "use client";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   useEffect(() => {
     const sections = Array.from(document.querySelectorAll<HTMLElement>(".section"));
     const navLinks = Array.from(document.querySelectorAll<HTMLElement>(".nav-link"));
@@ -38,59 +40,69 @@ export default function Home() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
+
   return (
     <main>
       <nav className="navbar">
         <a href="#" className="logo">Portfolio.</a>
-        <ul>
-          <li className="nav-link active"><a href="#">Home</a></li>
-          <li className="nav-link"><a href="#about">About Me</a></li>
-          <li className="nav-link"><a href="#projects">My Projects</a></li>
-          <li className="nav-link"><a href="">My Skills</a></li>
-          <li className="nav-link"><a href="">My Skills</a></li>
-          <li className="nav-link"><a href="">Contact</a></li>
+        <ul className={`nav-menu ${menuOpen ? 'active' : ''}`}>
+          <li className="nav-link active"><a href="#" onClick={closeMenu}>Home</a></li>
+          <li className="nav-link"><a href="#about" onClick={closeMenu}>About Me</a></li>
+          <li className="nav-link"><a href="#projects" onClick={closeMenu}>My Projects</a></li>
+          <li className="nav-link"><a href="" onClick={closeMenu}>My Skills</a></li>
+          <li className="nav-link"><a href="" onClick={closeMenu}>My Skills</a></li>
+          <li className="nav-link"><a href="" onClick={closeMenu}>Contact</a></li>
         </ul>
+        <button className={`hamburger ${menuOpen ? 'active' : ''}`} onClick={toggleMenu}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </nav>
 
       <div className="bars-animation">
-        <div className="bar" style={{ '--i': 6 } as React.CSSProperties}></div>
-        <div className="bar" style={{ '--i': 5 } as React.CSSProperties}></div>
-        <div className="bar" style={{ '--i': 4 } as React.CSSProperties}></div>
-        <div className="bar" style={{ '--i': 3 } as React.CSSProperties}></div>
-        <div className="bar" style={{ '--i': 2 } as React.CSSProperties}></div>
-        <div className="bar" style={{ '--i': 1 } as React.CSSProperties}></div>
+        <div className="bar" style={{ ['--i' as any]: 6 }}></div>
+        <div className="bar" style={{ ['--i' as any]: 5 }}></div>
+        <div className="bar" style={{ ['--i' as any]: 4 }}></div>
+        <div className="bar" style={{ ['--i' as any]: 3 }}></div>
+        <div className="bar" style={{ ['--i' as any]: 2 }}></div>
+        <div className="bar" style={{ ['--i' as any]: 1 }}></div>
       </div>
 
       <section className="home">
-        <div className="home-info home-info-top">
+        <div className="home-info">
           <h1>Pinithi Ransiluni</h1>
           <h2>
-            I&apos;m a&nbsp;
-            <span style={{ '--i': 0 } as React.CSSProperties} data-text=" Frontend Developer"> Frontend Developer</span>
-            <span style={{ '--i': 1 } as React.CSSProperties} data-text=" Software Engineering Undergraduate"> Software Engineering Undergraduate</span>
-            <span style={{ '--i': 2 } as React.CSSProperties} data-text=" Software developer"> Software developer</span>
-            <span style={{ '--i': 3 } as React.CSSProperties} data-text=" Vedio Editor"> Vedio Editor</span>
+            I'm a&nbsp;
+            <span style={{ ['--i' as any]: 0 }} data-text=" Frontend Developer"> Frontend Developer</span>
+            <span style={{ ['--i' as any]: 1 }} data-text=" Software Engineering Undergraduate"> Software Engineering Undergraduate</span>
+            <span style={{ ['--i' as any]: 2 }} data-text=" Software developer"> Software developer</span>
+            <span style={{ ['--i' as any]: 3 }} data-text=" Vedio Editor"> Vedio Editor</span>
           </h2>
-        </div>
 
-        <div className="home-img">
-          <div className="img-box">
-            <div className="img-item">
-              <img src="/my-r.png" alt="image" />
-            </div>
-          </div>
-        </div>
-
-        <div className="home-info home-info-bottom">
           <p>
-            Enthusiastic about crafting user-focused digital solutions using the latest web technologies. I&apos;m eager to
+            Enthusiastic about crafting user-focused digital solutions using the latest web technologies. I'm eager to
             learn and bring my creative ideas to life through engaging interfaces and mobile app experiences.
           </p>
           <div className="btn-sci">
             <a href="#" className="btn">Download CV</a>
             <div className="sci">
-              <a href="https://github.com/Ransiluni2003"><i className="bx bxl-github"></i></a>
-              <a href="https://www.linkedin.com/in/pinithi-ransiluni-8b8936329/"><i className="bx bxl-linkedin"></i></a>
+              <a href="https://github.com/Ransiluni2003"><i className='bx bxl-github'></i></a>
+              <a href="https://www.linkedin.com/in/pinithi-ransiluni-8b8936329/"><i className='bx bxl-linkedin'></i></a>
+            </div>
+          </div>
+        </div>
+        <div className="home-img">
+          <div className="img-box">
+            <div className="img-item">
+              <img src="/my-r.png" alt="image" />
             </div>
           </div>
         </div>
@@ -103,10 +115,10 @@ export default function Home() {
           <div className="about-text">
             <h1>About Me</h1>
             <p>
-              Hi! I&apos;m Pinithi Ransiluni, a passionate Software Engineering Undergraduate with a strong interest in
+              Hi! I'm Pinithi Ransiluni, a passionate Software Engineering Undergraduate with a strong interest in
               frontend development, web design, and creative digital solutions. I enjoy crafting clean, responsive user
-              interfaces and turning ideas into visually appealing, interactive experiences. I&apos;m always exploring new
-              technologies to expand my capabilities. I&apos;m driven by curiosity, a love for learning, and a dedication to
+              interfaces and turning ideas into visually appealing, interactive experiences. I'm always exploring new
+              technologies to expand my capabilities. I’m driven by curiosity, a love for learning, and a dedication to
               building user-centered designs that solve real-world problems.
             </p>
           </div>
