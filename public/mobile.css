@@ -27,23 +27,18 @@
     }
 
     .home-info h2 span {
-        position: absolute;
-        display: inline-block;
-        color: transparent;
-        -webkit-text-stroke: 0.7px #7cf03d;
-        animation: display-text 16s linear infinite;
-        animation-delay: calc(-4s * var(--i));
+        position: static;
+        display: inline;
+        -webkit-text-stroke: 0 !important;
+        color: #7cf03d;
+        animation: none !important;
+        animation-delay: unset !important;
+        font-weight: 600;
     }
 
     .home-info h2 span::before {
-        content: attr(data-text);
-        position: absolute;
-        width: 0;
-        border-right: 2px solid #7cf03d;
-        color: #7cf03d;
-        white-space: nowrap;
-        overflow: hidden;
-        animation: fill-text 4s linear infinite;
+        display: none !important;
+        content: none !important;
     }
 
     .home-img {
