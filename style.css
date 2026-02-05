@@ -399,7 +399,7 @@ a{
     grid-auto-rows: auto;
     align-items: start;
     gap: 50px;
-    padding: 100px 9% 60px;
+    padding: 2px  9% 60px;
     color: #fff;
     visibility: hidden;
     opacity: 0;
@@ -627,25 +627,31 @@ a{
 }
 
 .bars-animation{
-    position: absolute;
-    width: 100%;
-    height:100%;
-    display:flex;
-    z-index: -1;
+    /* full-screen cover for "stair" reveal */
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    z-index: 9999;
+    pointer-events: none;
+    overflow: hidden;
 }
 
 .bars-animation .bar{
-    width:100%;
+    flex: 1 1 0;
     height: 100%;
-    background:#1f242d;
-    transform: translateY(-100%); 
-    animation: show-bars .5s ease-in-out forwards; 
-    animation-delay: calc(.1s * var(--i)); 
+    background: #1f242d;
+    transform: translateY(-100%);
+    /* two-phase: drop in (cover) then slide up to reveal */
+    animation: show-bars 1.1s cubic-bezier(.2,.9,.2,1) forwards;
+    animation-delay: calc(.08s * var(--i));
 }
+
 @keyframes show-bars{
-    100%{
-        transform: translateY(0%);
-    }
+    0% { transform: translateY(-100%); opacity: 1; }
+    40% { transform: translateY(0%); opacity: 1; }
+    100% { transform: translateY(-100%); opacity: 0; }
 }
 
 /* --------------------------------------------------------- */
