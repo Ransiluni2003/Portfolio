@@ -112,9 +112,11 @@ body{
 @media (max-width: 1024px) {
     .home {
         height: auto;
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
+        min-height: auto;
+        display: flex !important;
+        flex-direction: column !important;
+        grid-template-columns: unset !important;
+        grid-template-rows: unset !important;
         text-align: center;
         gap: 24px;
         padding: 100px 6% 40px;
@@ -123,16 +125,19 @@ body{
     .home-info {
         order: 1;
         width: 100%;
+        grid-column: unset !important;
+        grid-row: unset !important;
     }
 
     .home-info h1 {
         font-size: 40px;
+        margin-bottom: 10px;
     }
 
     .home-info h2 {
         font-size: 18px;
         margin-top: 8px;
-        margin-bottom: 0;
+        margin-bottom: 20px;
     }
 
     .home-info h2 span {
@@ -148,11 +153,13 @@ body{
     }
 
     .home-img {
-        order: 2;
+        order: 2 !important;
         width: 100%;
-        margin: 30px 0;
+        margin: 20px 0 30px 0;
         display: flex;
         justify-content: center;
+        grid-column: unset !important;
+        grid-row: unset !important;
     }
 
     .home-img .img-box {
