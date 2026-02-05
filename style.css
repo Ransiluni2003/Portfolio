@@ -112,11 +112,9 @@ body{
 @media (max-width: 1024px) {
     .home {
         height: auto;
-        min-height: auto;
-        display: flex !important;
-        flex-direction: column !important;
-        grid-template-columns: unset !important;
-        grid-template-rows: unset !important;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
         text-align: center;
         gap: 24px;
         padding: 100px 6% 40px;
@@ -125,46 +123,56 @@ body{
     .home-info {
         order: 1;
         width: 100%;
-        grid-column: unset !important;
-        grid-row: unset !important;
     }
 
     .home-info h1 {
         font-size: 40px;
-        margin-bottom: 10px;
     }
 
     .home-info h2 {
         font-size: 18px;
         margin-top: 8px;
-        margin-bottom: 20px;
+        margin-bottom: 0;
     }
 
     .home-info h2 span {
-        position: relative;
-        display: block;
-        -webkit-text-stroke: 0;
+        position: static;
+        display: inline;
+        -webkit-text-stroke: 0 !important;
         color: #7cf03d;
-        animation: none;
+        animation: none !important;
+        animation-delay: unset !important;
+        font-weight: 600;
     }
 
     .home-info h2 span::before {
-        display: none;
+        display: none !important;
+        content: none !important;
     }
 
     .home-img {
-        order: 2 !important;
+        order: 2;
         width: 100%;
-        margin: 20px 0 30px 0;
-        display: flex;
+    }
+
+    .home-info-bottom {
+        order: 3;
+        width: 100%;
+    }
+
+    .home-info-bottom p {
+        margin-top: 0;
+    }
+
+    .home-info .btn-sci,
+    .home-info-bottom .btn-sci {
         justify-content: center;
-        grid-column: unset !important;
-        grid-row: unset !important;
+        flex-wrap: wrap;
     }
 
     .home-img .img-box {
-        width: 340px;
-        height: 340px;
+        width: 260px;
+        height: 260px;
         margin: 0 auto;
     }
 
@@ -172,28 +180,6 @@ body{
         width: 100%;
         height: auto;
         object-fit: cover;
-    }
-
-    .home-info-bottom {
-        order: 3;
-        width: 100%;
-        padding: 20px 0;
-    }
-
-    .home-info-bottom p {
-        margin-top: 20px;
-        margin-bottom: 20px;
-        font-size: 15px;
-        line-height: 1.6;
-        color: #ccc;
-        padding: 0 10px;
-    }
-
-    .home-info .btn-sci,
-    .home-info-bottom .btn-sci {
-        justify-content: center;
-        flex-wrap: wrap;
-        margin-top: 10px;
     }
 }
 
