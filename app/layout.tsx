@@ -30,6 +30,8 @@ export default function RootLayout({
           href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
           rel="stylesheet"
         />
+        {/* Mobile-only overrides loaded via media */}
+        <link rel="stylesheet" href="/mobile.css" media="(max-width: 1024px)" />
       </head>
       <body
         className="antialiased"

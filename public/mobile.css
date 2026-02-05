@@ -1,0 +1,147 @@
+/* Mobile overrides - loaded only for max-width:1024px */
+
+@media (max-width: 1024px) {
+    .home {
+        height: auto;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 24px;
+        padding: 100px 6% 40px;
+    }
+
+    .home-info {
+        order: 1;
+        width: 100%;
+    }
+
+    .home-info h1 {
+        font-size: 40px;
+    }
+
+    .home-info h2 {
+        font-size: 18px;
+        margin-top: 8px;
+        margin-bottom: 0;
+    }
+
+    .home-info h2 span {
+        position: static;
+        display: inline;
+        -webkit-text-stroke: 0 !important;
+        color: #7cf03d;
+        animation: none !important;
+        animation-delay: unset !important;
+        font-weight: 600;
+    }
+
+    .home-info h2 span::before {
+        display: none !important;
+        content: none !important;
+    }
+
+    .home-img {
+        order: 2;
+        width: 100%;
+        margin: 30px 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .home-img .img-box {
+        width: 340px;
+        height: 340px;
+        margin: 0 auto;
+    }
+
+    .home-img img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .home-info-bottom {
+        order: 3;
+        width: 100%;
+        padding: 20px 0;
+    }
+
+    .home-info-bottom p {
+        margin-top: 0;
+        margin-bottom: 20px;
+        font-size: 15px;
+        line-height: 1.6;
+        color: #ccc;
+        padding: 0 10px;
+    }
+
+    .home-info .btn-sci,
+    .home-info-bottom .btn-sci {
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+        scroll-snap-type: none;
+    }
+
+    .home {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .home-info-top {
+        width: 100%;
+        order: 1;
+    }
+
+    .home-img {
+        order: 2;
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .home-info-bottom {
+        width: 100%;
+        order: 3;
+    }
+
+    .bars-animation {
+        display: none;
+    }
+
+    .project-card {
+        width: 100%;
+        max-width: 100%;
+        padding: 20px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .project-img {
+        width: 100%;
+        max-width: 320px;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-info h1 {
+        font-size: 32px;
+    }
+
+    .home-info p {
+        font-size: 14px;
+    }
+
+    .home-img .img-box {
+        width: 220px;
+        height: 220px;
+    }
+}
