@@ -292,7 +292,7 @@ payment gateway, and conversion-focused UI/UX design to enhance customer engagem
                 <span>CSS</span>
                 <span>Woocommerce</span>
               </div>
-              <p className="git"><a href="https://travelguru.piniflora.store/" target="_blank" rel="noopener noreferrer">Source code</a></p>
+              <p className="git"><a href="https://langlearn.piniflora.store/" target="_blank" rel="noopener noreferrer">Source code</a></p>
             </div>
           </div>
 
