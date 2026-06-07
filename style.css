@@ -428,13 +428,13 @@ a{
     display: inline-block;
     color: transparent;
     -webkit-text-stroke: .7px #7cf03d;
-    animation: display-text 16s linear infinite;
+    animation: display-text 20s linear infinite;
     animation-delay: calc(-4s * var(--i));
 }
 
 @keyframes display-text{
     
-    25%,
+    20%,
     100%{
       visibility: hidden;
     }
@@ -449,6 +449,7 @@ a{
      white-space: nowrap;
      overflow: hidden;
      animation: fill-text 4s linear infinite;
+     animation-delay: calc(-4s * var(--i));
 }
 
 @keyframes  fill-text{

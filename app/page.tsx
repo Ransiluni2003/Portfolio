@@ -129,6 +129,7 @@ export default function Home() {
             <span style={{ ['--i' as any]: 1 }} data-text=" Software Engineering Undergraduate"> Software Engineering Undergraduate</span>
             <span style={{ ['--i' as any]: 2 }} data-text=" Software developer"> Software developer</span>
             <span style={{ ['--i' as any]: 3 }} data-text=" Vedio Editor"> Vedio Editor</span>
+            <span style={{ ['--i' as any]: 4 }} data-text=" Wordpress Developer">Wordpress Developer</span>
           </h2>
         </div>
         
@@ -153,7 +154,7 @@ export default function Home() {
             learn and bring my creative ideas to life through engaging interfaces and mobile app experiences.
           </p>
           <div className="btn-sci" style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
-            <a href="#" className="btn">Download CV</a>
+            <a href="/PINITHI-Ransiluni%20(4)%20wordpress.pdf" className="btn" download="Pinithi-Ransiluni-CV.pdf">Download CV</a>
             <a 
               href="https://github.com/Ransiluni2003"
               onMouseEnter={() => setGithubHover(true)}
@@ -205,7 +206,7 @@ export default function Home() {
             <h1>About Me</h1>
             <p>
               Hi! I&apos;m Pinithi Ransiluni, a passionate Software Engineering Undergraduate with a strong interest in
-              frontend development, web design, and creative digital solutions. I enjoy crafting clean, responsive user
+              frontend development, web design, website develop using wordpress and creative digital solutions. I enjoy crafting clean, responsive user
               interfaces and turning ideas into visually appealing, interactive experiences. I&apos;m always exploring new
               technologies to expand my capabilities. I&apos;m driven by curiosity, a love for learning, and a dedication to
               building user-centered designs that solve real-world problems.
@@ -260,7 +261,41 @@ secure payments, and special deal features to enhance user engagement.</p>
               </div>
               <p className="git"><a href="https://github.com/Ransiluni2003/BODYDOC_Fitness_And_Wellness_Center" target="_blank" rel="noopener noreferrer">Source code</a></p>
             </div>
+
+            
           </div>
+
+          <div className="project-card">
+            <img src="1 new.png" alt="Project 4" className="project-img" />
+            <div className="project-info">
+              <h2>Tourism Website</h2>
+              <p>Designed and developed a tourism platform that combines cultural travel experiences with Sinhala and Tamil 
+language learning. Implemented destination showcases, cultural interaction features, and user-friendly 
+navigation to promote authentic Sri Lankan travel experiences. </p>
+              <div className="project-languages">
+                <span>Wordpress</span>
+                <span>CSS</span>
+              </div>
+              <p className="git"><a href="https://travelguru.piniflora.store/" target="_blank" rel="noopener noreferrer">Source code</a></p>
+            </div>
+          </div>
+
+          <div className="project-card">
+            <img src="langLearn.png" alt="Project 4" className="project-img" />
+            <div className="project-info">
+              <h2>LangLearn Store </h2>
+              <p>Built a fully functional e-commerce website for language learners, featuring online language courses, 
+vocabulary kits, conversation guides, and exam preparation materials. Integrated WooCommerce, PayHere 
+payment gateway, and conversion-focused UI/UX design to enhance customer engagement and online sales. </p>
+              <div className="project-languages">
+                <span>Wordpress</span>
+                <span>CSS</span>
+                <span>Woocommerce</span>
+              </div>
+              <p className="git"><a href="https://travelguru.piniflora.store/" target="_blank" rel="noopener noreferrer">Source code</a></p>
+            </div>
+          </div>
+
         </div>
       </section>
 
@@ -304,6 +339,17 @@ secure payments, and special deal features to enhance user engagement.</p>
             <div className="skill-info">
               <h3>JavaScript</h3>
               <p>Creating interactive web experiences with modern ES6+ features</p>
+            </div>
+          </div>
+
+
+<div className="skill-card">
+            <div className="skill-icon">
+              <i className='bx bxl-html5'></i>
+            </div>
+            <div className="skill-info">
+              <h3>Woocommerce</h3>
+              <p>WooCommerce Development and Management for Modern E-Commerce Applications</p>
             </div>
           </div>
 
