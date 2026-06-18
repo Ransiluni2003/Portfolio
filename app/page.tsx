@@ -132,7 +132,7 @@ export default function Home() {
             <span style={{ ['--i' as any]: 4 }} data-text=" Wordpress Developer">Wordpress Developer</span>
           </h2>
         </div>
-        
+
         <div className="home-img">
           <div className="img-box">
             <div className="img-item">
@@ -150,51 +150,51 @@ export default function Home() {
             maxWidth: '520px',
             padding: '10px'
           }}>
-            Enthusiastic about crafting user-focused digital solutions using the latest web technologies. I&apos;m eager to
+            I specialize in building responsive WordPress websites and WooCommerce stores that deliver seamless user experiences. I enjoy creating modern, user-friendly digital solutions using WordPress, Elementor, WooCommerce, and frontend technologies. I&apos;m eager to
             learn and bring my creative ideas to life through engaging interfaces and mobile app experiences.
           </p>
           <div className="btn-sci" style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
             <a href="/PINITHI-Ransiluni%20(4)%20wordpress.pdf" className="btn" download="Pinithi-Ransiluni-CV.pdf">Download CV</a>
-            <a 
+            <a
               href="https://github.com/Ransiluni2003"
               onMouseEnter={() => setGithubHover(true)}
               onMouseLeave={() => setGithubHover(false)}
               style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              width: '55px',
-              height: '55px',
-              padding: '10px',
-              border: '2px solid #7cf03d',
-              borderRadius: '50%',
-              fontSize: '26px',
-              color: githubHover ? '#1f242d' : '#7cf03d',
-              background: githubHover ? '#7cf03d' : 'transparent',
-              transition: 'all 0.3s ease',
-              boxShadow: githubHover ? '0 6px 25px rgba(124, 240, 61, 0.4)' : '0 4px 15px rgba(124, 240, 61, 0.1)',
-              transform: githubHover ? 'translateY(-3px)' : 'translateY(0)'
-            }}><i className='bx bxl-github'></i></a>
-            <a 
+                display: 'inline-flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                width: '55px',
+                height: '55px',
+                padding: '10px',
+                border: '2px solid #7cf03d',
+                borderRadius: '50%',
+                fontSize: '26px',
+                color: githubHover ? '#1f242d' : '#7cf03d',
+                background: githubHover ? '#7cf03d' : 'transparent',
+                transition: 'all 0.3s ease',
+                boxShadow: githubHover ? '0 6px 25px rgba(124, 240, 61, 0.4)' : '0 4px 15px rgba(124, 240, 61, 0.1)',
+                transform: githubHover ? 'translateY(-3px)' : 'translateY(0)'
+              }}><i className='bx bxl-github'></i></a>
+            <a
               href="https://www.linkedin.com/in/pinithi-ransiluni-8b8936329/"
               onMouseEnter={() => setLinkedinHover(true)}
               onMouseLeave={() => setLinkedinHover(false)}
               style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              width: '55px',
-              height: '55px',
-              padding: '10px',
-              border: '2px solid #7cf03d',
-              borderRadius: '50%',
-              fontSize: '26px',
-              color: linkedinHover ? '#1f242d' : '#7cf03d',
-              background: linkedinHover ? '#7cf03d' : 'transparent',
-              transition: 'all 0.3s ease',
-              boxShadow: linkedinHover ? '0 6px 25px rgba(124, 240, 61, 0.4)' : '0 4px 15px rgba(124, 240, 61, 0.1)',
-              transform: linkedinHover ? 'translateY(-3px)' : 'translateY(0)'
-            }}><i className='bx bxl-linkedin'></i></a>
+                display: 'inline-flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                width: '55px',
+                height: '55px',
+                padding: '10px',
+                border: '2px solid #7cf03d',
+                borderRadius: '50%',
+                fontSize: '26px',
+                color: linkedinHover ? '#1f242d' : '#7cf03d',
+                background: linkedinHover ? '#7cf03d' : 'transparent',
+                transition: 'all 0.3s ease',
+                boxShadow: linkedinHover ? '0 6px 25px rgba(124, 240, 61, 0.4)' : '0 4px 15px rgba(124, 240, 61, 0.1)',
+                transform: linkedinHover ? 'translateY(-3px)' : 'translateY(0)'
+              }}><i className='bx bxl-linkedin'></i></a>
           </div>
         </div>
       </section>
@@ -205,11 +205,11 @@ export default function Home() {
           <div className="about-text">
             <h1>About Me</h1>
             <p>
-              Hi! I&apos;m Pinithi Ransiluni, a passionate Software Engineering Undergraduate with a strong interest in
-              frontend development, web design, website develop using wordpress and creative digital solutions. I enjoy crafting clean, responsive user
-              interfaces and turning ideas into visually appealing, interactive experiences. I&apos;m always exploring new
-              technologies to expand my capabilities. I&apos;m driven by curiosity, a love for learning, and a dedication to
-              building user-centered designs that solve real-world problems.
+              Hi! I&apos;m Pinithi Ransiluni, a Software Engineering Undergraduate passionate about WordPress development,
+              WooCommerce solutions, and frontend design. I enjoy creating responsive, user-friendly websites that combine
+              functionality with modern design principles.
+              I have experience building e-commerce websites, customizing themes and plugins, and developing engaging user
+              interfaces using WordPress and modern web technologies.
             </p>
           </div>
         </div>
@@ -218,12 +218,44 @@ export default function Home() {
       <section className="projects section" id="projects">
         <h1 className="projects-title">My Projects</h1>
         <div className="projects-grid">
+
+          <div className="project-card">
+            <img src="1 new.png" alt="Project 4" className="project-img" />
+            <div className="project-info">
+              <h2>Tourism Website</h2>
+              <p>Designed and developed a tourism platform that combines cultural travel experiences with Sinhala and Tamil
+                language learning. Implemented destination showcases, cultural interaction features, and user-friendly
+                navigation to promote authentic Sri Lankan travel experiences. </p>
+              <div className="project-languages">
+                <span>Wordpress</span>
+                <span>CSS</span>
+              </div>
+              <p className="git"><a href="https://travelguru.piniflora.store/" target="_blank" rel="noopener noreferrer">Source code</a></p>
+            </div>
+          </div>
+
+          <div className="project-card">
+            <img src="langLearn.png" alt="Project 4" className="project-img" />
+            <div className="project-info">
+              <h2>LangLearn Store </h2>
+              <p>Built a fully functional e-commerce website for language learners, featuring online language courses,
+                vocabulary kits, conversation guides, and exam preparation materials. Integrated WooCommerce, PayHere
+                payment gateway, and conversion-focused UI/UX design to enhance customer engagement and online sales. </p>
+              <div className="project-languages">
+                <span>Wordpress</span>
+                <span>CSS</span>
+                <span>Woocommerce</span>
+              </div>
+              <p className="git"><a href="https://langlearn.piniflora.store/" target="_blank" rel="noopener noreferrer">Source code</a></p>
+            </div>
+          </div>
+
           <div className="project-card">
             <img src="1.png" alt="Project 1" className="project-img" />
             <div className="project-info">
               <h2>The Ring restaurant</h2>
-              <p>Designed the Ring Restaurant app in Figma with intuitive navigation, interactive menu browsing, 
-secure payments, and special deal features to enhance user engagement.</p>
+              <p>Designed the Ring Restaurant app in Figma with intuitive navigation, interactive menu browsing,
+                secure payments, and special deal features to enhance user engagement.</p>
               <div className="project-languages">
                 <span>Kotlin</span>
                 <span>Android Studio</span>
@@ -232,6 +264,7 @@ secure payments, and special deal features to enhance user engagement.</p>
               <p className="git"><a href="https://github.com/Ransiluni2003/Ring-Restaurant-App" target="_blank" rel="noopener noreferrer">Source code</a></p>
             </div>
           </div>
+
           <div className="project-card">
             <img src="GIM.jpeg" alt="Project 2" className="project-img" />
             <div className="project-info">
@@ -246,7 +279,7 @@ secure payments, and special deal features to enhance user engagement.</p>
               <p className="git"><a href="https://github.com/Ransiluni2003/BODYDOC_Fitness_And_Wellness_Center" target="_blank" rel="noopener noreferrer">Source code</a></p>
             </div>
           </div>
-  
+
           <div className="project-card">
             <img src="Multi.png" alt="Project 3" className="project-img" />
             <div className="project-info">
@@ -259,49 +292,46 @@ secure payments, and special deal features to enhance user engagement.</p>
                 <span>React</span>
                 <span>Docker</span>
               </div>
-              <p className="git"><a href="https://github.com/Ransiluni2003/BODYDOC_Fitness_And_Wellness_Center" target="_blank" rel="noopener noreferrer">Source code</a></p>
-            </div>
-
-            
-          </div>
-
-          <div className="project-card">
-            <img src="1 new.png" alt="Project 4" className="project-img" />
-            <div className="project-info">
-              <h2>Tourism Website</h2>
-              <p>Designed and developed a tourism platform that combines cultural travel experiences with Sinhala and Tamil 
-language learning. Implemented destination showcases, cultural interaction features, and user-friendly 
-navigation to promote authentic Sri Lankan travel experiences. </p>
-              <div className="project-languages">
-                <span>Wordpress</span>
-                <span>CSS</span>
-              </div>
-              <p className="git"><a href="https://travelguru.piniflora.store/" target="_blank" rel="noopener noreferrer">Source code</a></p>
+              <p className="git"><a href="https://github.com/Ransiluni2003/multi-gateway-platform" target="_blank" rel="noopener noreferrer">Source code</a></p>
             </div>
           </div>
-
-          <div className="project-card">
-            <img src="langLearn.png" alt="Project 4" className="project-img" />
-            <div className="project-info">
-              <h2>LangLearn Store </h2>
-              <p>Built a fully functional e-commerce website for language learners, featuring online language courses, 
-vocabulary kits, conversation guides, and exam preparation materials. Integrated WooCommerce, PayHere 
-payment gateway, and conversion-focused UI/UX design to enhance customer engagement and online sales. </p>
-              <div className="project-languages">
-                <span>Wordpress</span>
-                <span>CSS</span>
-                <span>Woocommerce</span>
-              </div>
-              <p className="git"><a href="https://langlearn.piniflora.store/" target="_blank" rel="noopener noreferrer">Source code</a></p>
-            </div>
-          </div>
-
         </div>
       </section>
 
       <section className="skills section" id="skills">
         <h1 className="skills-title">My Skills</h1>
         <div className="skills-grid">
+
+          <div className="skill-card">
+            <div className="skill-icon">
+              <i className='bx bxl-html5'></i>
+            </div>
+            <div className="skill-info">
+              <h3>Woocommerce</h3>
+              <p>WooCommerce Development and Management for Modern E-Commerce Applications</p>
+            </div>
+          </div>
+
+          <div className="skill-card">
+            <div className="skill-icon">
+              <i className='bx bxl-wordpress'></i>
+            </div>
+            <div className="skill-info">
+              <h3>WordPress</h3>
+              <p>Creating and customizing WordPress websites with themes and plugins</p>
+            </div>
+          </div>
+
+          <div className="skill-card">
+            <div className="skill-icon">
+              <i className='bx bxs-layout'></i>
+            </div>
+            <div className="skill-info">
+              <h3>Elementor</h3>
+              <p>Designing responsive and visually engaging WordPress websites using Elementor page builder</p>
+            </div>
+          </div>
+
           <div className="skill-card">
             <div className="skill-icon">
               <i className='bx bxl-react'></i>
@@ -343,15 +373,7 @@ payment gateway, and conversion-focused UI/UX design to enhance customer engagem
           </div>
 
 
-<div className="skill-card">
-            <div className="skill-icon">
-              <i className='bx bxl-html5'></i>
-            </div>
-            <div className="skill-info">
-              <h3>Woocommerce</h3>
-              <p>WooCommerce Development and Management for Modern E-Commerce Applications</p>
-            </div>
-          </div>
+
 
           <div className="skill-card">
             <div className="skill-icon">
@@ -403,15 +425,7 @@ payment gateway, and conversion-focused UI/UX design to enhance customer engagem
             </div>
           </div>
 
-          <div className="skill-card">
-            <div className="skill-icon">
-              <i className='bx bxl-wordpress'></i>
-            </div>
-            <div className="skill-info">
-              <h3>WordPress</h3>
-              <p>Creating and customizing WordPress websites with themes and plugins</p>
-            </div>
-          </div>
+
 
           <div className="skill-card">
             <div className="skill-icon">
@@ -451,7 +465,7 @@ payment gateway, and conversion-focused UI/UX design to enhance customer engagem
           <div className="contact-info">
             <h2>Get In Touch</h2>
             <p>Feel free to reach out for collaborations or just a friendly hello!</p>
-            
+
             <div className="contact-details">
               <div className="contact-item">
                 <div className="contact-icon">
@@ -459,7 +473,7 @@ payment gateway, and conversion-focused UI/UX design to enhance customer engagem
                 </div>
                 <div>
                   <h3>Phone</h3>
-                  <p>0763042001</p>
+                  <p>076-3042001</p>
                 </div>
               </div>
 
@@ -479,7 +493,7 @@ payment gateway, and conversion-focused UI/UX design to enhance customer engagem
                 </div>
                 <div>
                   <h3>Location</h3>
-                  <p>Kaluthara, Western Province, Sri Lanka</p>
+                  <p>Kaluthara,Sri Lanka</p>
                 </div>
               </div>
             </div>
@@ -490,25 +504,25 @@ payment gateway, and conversion-focused UI/UX design to enhance customer engagem
               <input type="hidden" name="access_key" value="f8bed0ac-2e8e-47fd-baf2-5a9ad731ec1b" />
               <input type="hidden" name="subject" value="New Contact Form Submission from Portfolio" />
               <input type="hidden" name="from_name" value="Portfolio Contact Form" />
-              
+
               <div className="form-group">
                 <input type="text" name="name" placeholder="Full Name" required />
               </div>
-              
+
               <div className="form-group">
                 <input type="email" name="email" placeholder="Email Address" required />
               </div>
-              
+
               <div className="form-group">
                 <textarea name="message" placeholder="Your Message" rows={6} required></textarea>
               </div>
-              
+
               {formMessage && (
                 <div className={`form-message ${formStatus}`}>
                   {formMessage}
                 </div>
               )}
-              
+
               <button type="submit" className="btn-submit" disabled={formStatus === 'submitting'}>
                 {formStatus === 'submitting' ? 'Sending...' : 'Send Message'}
               </button>
